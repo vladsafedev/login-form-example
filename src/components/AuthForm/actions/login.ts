@@ -14,13 +14,13 @@ export type LoginState = {
  * - `error`: Error message if login failed
  * - `user`: User object if login succeeded
  */
-export default async function loginAction(prevState: LoginState | null, formData: FormData) {
+export default async function loginAction(_prevState: LoginState | null, formData: FormData) {
   // In a real app, this would send a request to a server.
   // For demo purposes, simulate a network request and response.
 
   const email = formData.get('email') as string;
-  const password = formData.get('password') as string;
-  const rememberMe = formData.get('remember-me') === 'on';
+  // const password = formData.get('password') as string;
+  // const rememberMe = formData.get('remember-me') === 'on';
 
   // Simulate network delay
   await new Promise(resolve => setTimeout(resolve, 1000));

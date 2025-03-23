@@ -6,7 +6,7 @@ import { useFormStatus } from "react-dom";
  * @returns A React component that displays a submit button
  */
 export default function SubmitButton() {
-  const { pending, data, method, action } = useFormStatus();
+  const { pending } = useFormStatus();
 
   return (
     <button
